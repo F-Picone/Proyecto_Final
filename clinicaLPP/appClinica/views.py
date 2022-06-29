@@ -1,12 +1,9 @@
 from django.http import  HttpResponse
 from django.template import loader,Context,Template
+from django.shortcuts import render
 
 
-def probandoTemplate(self):
-    diccionario = {'nombre':'nombre'}
-    plantilla = loader.get_template('template1.html')
-    documento = plantilla.render(diccionario)
-    return HttpResponse(documento)
+
 
 def inicio(request):
-    return HttpResponse('vistia inicio')
+    return render(request, 'appClinica/inicio.html')
