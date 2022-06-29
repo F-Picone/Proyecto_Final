@@ -1,8 +1,8 @@
 from django.contrib import admin
-from django.urls import path
-from clinicaLPP.views import probandoTemplate
+from django.urls import path, include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', probandoTemplate),
+    path('', include('appClinica.urls')),
 ]
