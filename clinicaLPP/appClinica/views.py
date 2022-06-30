@@ -22,3 +22,15 @@ def contacto(request):
 
 def admin(request):
     return render(request, 'appClinica/admin.html')
+
+def tsolicitado(request):
+    return render(request, 'appClinica/tsolicitado.html')
+
+def agregarpaciente(request):
+    return render(request, 'appClinica/agregarpaciente.html')
+
+def pacientes(request):
+    return render(request, 'appClinica/pacientes.html')
+
+def personal(request):
+    return render(request, 'appClinica/personal.html')
