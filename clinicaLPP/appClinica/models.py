@@ -1,12 +1,12 @@
 from django.db import models
 
-class medico(models.Model):
+class personal(models.Model):                        
     nombre = models.CharField(max_length=20)
     apellido = models.CharField(max_length=20)
-    especialidad = models.CharField(max_length=20)
-
+    cargo = models.CharField(max_length=20)
+    dni = models.IntegerField()
     def __str__(self) -> str:
-        return self.nombre +" "+ self.apellido + " " + self.especialidad
+        return self.nombre +" "+ self.apellido + ": " + self.cargo
 
 class paciente(models.Model):
     nombre = models.CharField(max_length=20)
@@ -15,7 +15,7 @@ class paciente(models.Model):
     obra_social= models.CharField(max_length=20)
 
     def __str__(self) -> str:
-        return self.nombre +" "+ self.apellido + " " + self.obra_social
+        return self.nombre +" "+ self.apellido + " Obra social: " + self.obra_social
 
 class solicitud_turno(models.Model):
     nombre = models.CharField(max_length=40)

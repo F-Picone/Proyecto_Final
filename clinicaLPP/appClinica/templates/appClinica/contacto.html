@@ -2,17 +2,17 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 class="mt-5"> xd </h1>
+    <h1 style="color:white" class="mt-5"> Contacto </h1>
 {% endblock %}
 
 {% block principal %}
-    <p> xd </p>
+    <p style="color:white"> Para contactarse con la clinica por favor llamar al numero: 2221-414942 en los horarios de 8:00 AM  -  17:00 PM.     Sino enviar un email a : clinicalpp@gmail.com y sera respondido a la brevedad </p>
 {% endblock %}
 
 {% block barra %}
-    <li class="nav-item active"><a class="nav-link" href="{% url 'turno' %}">Solicitar turno</a></li>
     <li class="nav-item"><a class="nav-link" href="{% url 'nosotros' %}">Sobre nosotros</a></li>
     <li class="nav-item"><a class="nav-link" href="{% url 'profesionales' %}">Nuestros profesionales</a></li>
     <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contact</a></li>
+    <li class="nav-item active"><a class="nav-link" href="{% url 'turno' %}">Solicitar turno</a></li>
     <li class="nav-item"><a class="nav-link" href="{% url 'admin' %}">Administrador</a></li>
 {% endblock %}

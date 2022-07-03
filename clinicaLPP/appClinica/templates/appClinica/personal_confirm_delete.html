@@ -2,13 +2,16 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 class="mt-5"> xd </h1>
+    <h1 class="mt-5"> Eliminar personal. </h1>
 {% endblock %}
 
 {% block principal %}
-    <p> xd </p>
+    <form method="POST"> {% csrf_token %}
+        Estas seguro de eliminar al personal "{{object}}"
+        <input type="submit" value="Si"/>
+    </form>
 {% endblock %}
-
+<!-- BARRA DE ADMIN -->
 {% block barra %}
     <li class="nav-item active"><a class="nav-link" href="{% url 'tsolicitado' %}">Turnos solicitados</a></li>
     <li class="nav-item"><a class="nav-link" href="{% url 'pacientes' %}">Pacientes</a></li>
