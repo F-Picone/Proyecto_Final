@@ -76,6 +76,17 @@ def buscar(request):
         respuesta = 'No enviaste datos correctos'
     return  HttpResponse(respuesta)
 
+class eliminarPaciente(DeleteView):
+    model = paciente
+    template_name = 'appClinica/paciente_confirm_delete.html'
+    success_url = reverse_lazy('pacientes')
+
+class editarPaciente(UpdateView):
+    model = paciente
+    template_name = 'appClinica/editarpaciente_form.html'
+    success_url = reverse_lazy('pacientes')
+    fields = ['nombre', 'apellido', 'dni', 'obra_social']
+
 
 #VIEWS DEL PERSONAL ADMIN
 class personalList2(ListView):

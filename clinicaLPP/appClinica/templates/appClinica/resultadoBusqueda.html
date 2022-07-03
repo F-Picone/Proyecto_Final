@@ -16,6 +16,8 @@
         <p>NOMBRE: {{paciente.nombre}}</p>
         <p>APELLIDO: {{paciente.apellido}}</p>
         <p>OBRA SOCIAL: {{paciente.obra_social}}</p>
+        <a href="{% url 'paciente_eliminar'  paciente.id %}"> Eliminar paciente</a>
+        <a href="{% url 'paciente_editar'  paciente.id %}"> Editar paciente</a>
         {% endfor %}
     </ul>
 

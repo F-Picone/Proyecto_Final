@@ -1,6 +1,6 @@
 from django import views
 from django.urls import path
-from appClinica.views import inicio, tsolicitadoList,turnoForm,contacto,nosotros,admin,agregarPersonalForm,busquedaPacientes,detallePersonal,personalList,agregarPacienteForm,editarPersonal,eliminarPersonal,personalList2,detalleTsolicitud,eliminarTsolicitud,buscar
+from appClinica.views import inicio, tsolicitadoList,turnoForm,contacto,nosotros,admin,agregarPersonalForm,busquedaPacientes,detallePersonal,personalList,agregarPacienteForm,editarPersonal,eliminarPersonal,personalList2,detalleTsolicitud,eliminarTsolicitud,buscar,editarPaciente,eliminarPaciente
 
 urlpatterns = [
     #------------------------------ URLS MAIN PAGE ------------------------------#
@@ -17,6 +17,11 @@ urlpatterns = [
     path('agregarpaciente/nuevo', agregarPacienteForm.as_view(), name='agregarpaciente'), 
     path('busquedaPacientes/', busquedaPacientes, name='pacientes'),
     path('buscar/', buscar, name='buscar'),
+    path('busquedaPacientes/borrar/<pk>', eliminarPaciente.as_view(), name='paciente_eliminar'),
+    path('busquedaPaciente/edicion/<pk>', editarPaciente.as_view(), name='paciente_editar'),
+
+
+    #------------------------------ URLS TURNOS ADMIN ------------------------------#
     path('tsolicitado/list', tsolicitadoList.as_view(), name='tsolicitado'),
     path('tsolicitado_detalle/<pk>', detalleTsolicitud.as_view(), name='tsolicitado_detalle'),
     path('tsolicitado/borrar/<pk>', eliminarTsolicitud.as_view(), name='tsolicitado_eliminar'),
