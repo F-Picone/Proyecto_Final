@@ -1,10 +1,10 @@
-from pdb import post_mortem
 from django.http import  HttpResponse
 from django.template import loader,Context,Template
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, DeleteView, CreateView,UpdateView
 from appClinica.models import paciente, personal, solicitud_turno
+from appClinica.forms import PacienteFormulario
 
 
 #VIEWS MAIN PAGE
@@ -64,8 +64,17 @@ class agregarPacienteForm(CreateView):
 
 #VIEWS DE PACIENTES ADMIN
 
-def pacientes(request):
-    return render(request, 'appClinica/pacientes.html')
+def busquedaPacientes(request):
+    return render(request, 'appClinica/busquedaPacientes.html')
+
+def buscar(request):
+    if request.GET["dni"]:
+        dni = request.GET["dni"]
+        pacientes= paciente.objects.filter(dni__icontains = dni)
+        return render(request, "appClinica/resultadoBusqueda.html", {"dni":dni, "pacientes":pacientes})
+    else:
+        respuesta = 'No enviaste datos correctos'
+    return  HttpResponse(respuesta)
 
 
 #VIEWS DEL PERSONAL ADMIN

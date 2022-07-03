@@ -2,32 +2,30 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 style="color:white" class="mt-5"> Nuestros profesionales </h1>
+    <h1 class="mt-5"> Resultados de la busqueda </h1>
 {% endblock %}
 
 {% block principal %}
-
-    <p style="color:white"> 
-        {% for personal in object_list %}
-            <li style="color:white"> {{personal}} </li>
-            <buton> 
-                <a href="{% url 'personal_eliminar' personal.id %}"> Eliminar personal</a>
-            </buton>
-            <buton> 
-                <a href="{% url 'personal_detalle' personal.id %}"> Detalles</a>
-            </buton>
-            <buton> 
-                <a href="{% url 'personal_editar' personal.id %}"> Editar </a>
-            </buton>
+<body>
+    <p> Estamos buscando al paciente con el dni: {{dni}}</p>
+    {% if pacientes %}
+    <p>Se encontro al paciente</p>
+    <ul>   
+        {% for paciente in pacientes %}
+        <p>DNI: {{dni}}</p>
+        <p>NOMBRE: {{paciente.nombre}}</p>
+        <p>APELLIDO: {{paciente.apellido}}</p>
+        <p>OBRA SOCIAL: {{paciente.obra_social}}</p>
         {% endfor %}
+    </ul>
 
-        <a href="{% url 'personal_agregar' %}"> Agregar personal</a>
-        <br>
-        <br>
-
-        
-    </p>
-
+    {% else %}
+        <p>No se encontro al paciente</p>
+    {% endif%}
+</body>
+<buton> 
+    <a href="{% url 'pacientes' %}"> Volves a pacientes</a>
+</buton>
 {% endblock %}
 <!-- BARRA DE ADMIN -->
 {% block barra %}

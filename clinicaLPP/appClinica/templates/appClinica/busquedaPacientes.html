@@ -2,11 +2,19 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 class="mt-5"> xd </h1>
+    <h1 class="mt-5"> Buscar paciente </h1>
 {% endblock %}
 
 {% block principal %}
-    <p style="color:white"> xd </p>
+    <form action="{% url 'buscar' %}" method="GET">
+        <p>Ingrese el DNI del paciente a buscar: </p>
+        <input type="number" name="dni" id="dni">
+        <input type="submit" value="Buscar">
+    </form>
+
+
+
+
 {% endblock %}
 <!-- BARRA DE ADMIN -->
 {% block barra %}

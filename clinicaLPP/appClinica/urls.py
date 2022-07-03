@@ -1,6 +1,6 @@
 from django import views
 from django.urls import path
-from appClinica.views import inicio, tsolicitadoList,turnoForm,contacto,nosotros,admin,agregarPersonalForm,pacientes,detallePersonal,personalList,agregarPacienteForm,editarPersonal,eliminarPersonal,personalList2,detalleTsolicitud,eliminarTsolicitud
+from appClinica.views import inicio, tsolicitadoList,turnoForm,contacto,nosotros,admin,agregarPersonalForm,busquedaPacientes,detallePersonal,personalList,agregarPacienteForm,editarPersonal,eliminarPersonal,personalList2,detalleTsolicitud,eliminarTsolicitud,buscar
 
 urlpatterns = [
     #------------------------------ URLS MAIN PAGE ------------------------------#
@@ -15,7 +15,8 @@ urlpatterns = [
 
     #------------------------------ URLS PACIENTES ADMIN ------------------------------#
     path('agregarpaciente/nuevo', agregarPacienteForm.as_view(), name='agregarpaciente'), 
-    path('pacientes/', pacientes, name='pacientes'), 
+    path('busquedaPacientes/', busquedaPacientes, name='pacientes'),
+    path('buscar/', buscar, name='buscar'),
     path('tsolicitado/list', tsolicitadoList.as_view(), name='tsolicitado'),
     path('tsolicitado_detalle/<pk>', detalleTsolicitud.as_view(), name='tsolicitado_detalle'),
     path('tsolicitado/borrar/<pk>', eliminarTsolicitud.as_view(), name='tsolicitado_eliminar'),
