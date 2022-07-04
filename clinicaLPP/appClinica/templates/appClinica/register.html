@@ -2,14 +2,14 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 class="mt-5"> Registro de usuario </h1>
+    <h1 style="color:lightseagreen" class="mt-5"> Registro de usuario </h1>
 {% endblock %}
 
 {% block principal %}
-<form style="color:white" method="POST">
+<form style="color:black" method="POST">
     {% csrf_token %}
     {{form.as_p}}
-    <button type="submit"> Registrarse </button>
+    <button style="color:black" type="submit"> Registrarse </button>
 
 </form>
 {% endblock %}

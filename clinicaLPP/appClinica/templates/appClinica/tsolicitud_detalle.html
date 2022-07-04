@@ -2,18 +2,17 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 class="mt-5"> Detalles de la solicitud. </h1>
+    <h1 style="color:lightseagreen" class="mt-5"> Detalles de la solicitud. </h1>
 {% endblock %}
-
 {% block principal %}
     <li>
-        <p style="color:white"> NOMBRE: <i>{{solicitud_turno.nombre}}</i> </p>
-        <p style="color:white"> APELLIDO: <i>{{solicitud_turno.apellido}}</i> </p>
-        <p style="color:white"> ESPECIALIDAD: <i>{{solicitud_turno.especialidad}}</i> </p>
-        <p style="color:white"> EMAIL: <i>{{solicitud_turno.email}}</i> </p>
+        <p style="color:black"> NOMBRE: <i>{{solicitud_turno.nombre}}</i> </p>
+        <p style="color:black"> APELLIDO: <i>{{solicitud_turno.apellido}}</i> </p>
+        <p style="color:black"> ESPECIALIDAD: <i>{{solicitud_turno.especialidad}}</i> </p>
+        <p style="color:black"> EMAIL: <i>{{solicitud_turno.email}}</i> </p>
     </li>
-    <p>
-        <a href="{% url 'tsolicitado' %}"> Volver a las solicitudes de turno</a>
+    <p style="color:black">
+        <a style="color:black" href="{% url 'tsolicitado' %}"> Volver a las solicitudes de turno</a>
     </p>
 {% endblock %}
 <!-- BARRA DE ADMIN -->

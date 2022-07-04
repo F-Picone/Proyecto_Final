@@ -2,14 +2,14 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 style="color:white" class="mt-5"> Nuestros profesionales </h1>
+    <h1 style="color:lightseagreen" class="mt-5"> Nuestros profesionales </h1>
 {% endblock %}
 
 {% block principal %}
 
-    <p style="color:white"> 
+    <p style="color:black"> 
         {% for personal in object_list %}
-            <li style="color:white"> {{personal}} </li>
+            <li style="color:black"> {{personal}} </li>
         {% endfor %}
     </p>
 

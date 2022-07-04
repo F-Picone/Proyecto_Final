@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 class="mt-5"> Panel de administracion  </h1>
+    <h1 style="color: lightseagreen" class="mt-5"> Panel de administracion  </h1>
 {% endblock %}
 
 {% block principal %}
-    <h1> {{mensaje}} </h1>
-    <a href="{% url 'login' %}"> Iniciar sesion</a>
+    <h1 style="color: black",> {{mensaje}} </h1>
+    <a style="color: black" href="{% url 'login' %}"> Iniciar sesion</a>
 {% endblock %}
 <!-- BARRA DE ADMIN -->
 {% block barra %}

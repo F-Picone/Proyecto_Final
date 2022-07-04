@@ -2,18 +2,18 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 class="mt-5"> Detalles del personal. </h1>
+    <h1 style="color:lightseagreen" class="mt-5"> Detalles del personal. </h1>
 {% endblock %}
 
 {% block principal %}
     <li>
-        <p style="color:white"> NOMBRE: <i>{{personal.nombre}}</i> </p>
-        <p style="color:white"> APELLIDO: <i>{{personal.apellido}}</i> </p>
-        <p style="color:white"> CARGO: <i>{{personal.cargo}}</i> </p>
-        <p style="color:white"> DNI: <i>{{personal.dni}}</i> </p>
+        <p style="color:black"> NOMBRE: <i>{{personal.nombre}}</i> </p>
+        <p style="color:black"> APELLIDO: <i>{{personal.apellido}}</i> </p>
+        <p style="color:black"> CARGO: <i>{{personal.cargo}}</i> </p>
+        <p style="color:black"> DNI: <i>{{personal.dni}}</i> </p>
     </li>
-    <p>
-        <a href="{% url 'personal' %}"> Volves a los profesionales</a>
+    <p style="color:black">
+        <a style="color:black" href="{% url 'personal' %}"> Volves a los profesionales</a>
     </p>
 {% endblock %}
 <!-- BARRA DE ADMIN -->

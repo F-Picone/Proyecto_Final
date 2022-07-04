@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 class="mt-5"> Eliminar solicitud de turno. </h1>
+    <h1 style="color: lightseagreen" class="mt-5"> Eliminar solicitud de turno. </h1>
 {% endblock %}
 
 {% block principal %}
-    <form method="POST"> {% csrf_token %}
+    <form style="color:black" method="POST"> {% csrf_token %}
         Estas seguro de eliminar la solicitud "{{object}}"
-        <input type="submit" value="Si"/>
+        <input style="color:black" type="submit" value="Si"/>
     </form>
 {% endblock %}
 <!-- BARRA DE ADMIN -->

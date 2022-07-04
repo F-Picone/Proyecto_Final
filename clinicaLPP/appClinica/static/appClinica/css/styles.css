@@ -84,7 +84,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background: url("https://thumbs.dreamstime.com/b/edificio-del-hospital-59693686.jpg") no-repeat center center fixed;
+  background: url("https://preview.redd.it/4z7qfg05tk991.jpg?width=1260&format=pjpg&auto=webp&s=bf0f34f52c431c7b37659e36e33aaab1a50ba51a") no-repeat center center fixed;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -11286,7 +11286,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  background: url("https://thumbs.dreamstime.com/b/edificio-del-hospital-59693686.jpg") no-repeat center center fixed;
+/*body {
+  background: url("blob:https://www.reddit.com/2431f70a-2045-4c7d-a35d-8ff4474c25d8") no-repeat center center fixed;
   background-size: cover;
-}
+}*/

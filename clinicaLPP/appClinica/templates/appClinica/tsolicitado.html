@@ -2,23 +2,23 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 style="color:white" class="mt-5"> Turnos Solicitados </h1>
+    <h1 style="color:lightseagreen" class="mt-5"> Turnos Solicitados </h1>
 {% endblock %}
 
 {% block principal %}
-    <p style="color:white"> 
+    <p style="color:black"> 
         {% for solicitud_turno in object_list %}
-            <li style="color:white"> {{solicitud_turno}} </li>
-            <buton> 
-                <a href="{% url 'tsolicitado_eliminar' solicitud_turno.id %}"> Eliminar solicitud de turno</a>
+            <li style="color:black"> {{solicitud_turno}} </li>
+            <buton style="color:black"> 
+                <a style="color:black" href="{% url 'tsolicitado_eliminar' solicitud_turno.id %}"> Eliminar solicitud de turno</a>
             </buton>
-            <buton> 
-                <a href="{% url 'tsolicitado_detalle' solicitud_turno.id %}"> Ver detalles de la solicitud</a>
+            <buton style="color:black"> 
+                <a style="color:black" href="{% url 'tsolicitado_detalle' solicitud_turno.id %}"> Ver detalles de la solicitud</a>
             </buton>
         {% endfor %}
     </p>
     <br>
-    <a href="{% url 'agregarpaciente' %}"> Agregar paciente</a>
+    <a style="color:black" href="{% url 'agregarpaciente' %}"> Agregar paciente</a>
 {% endblock %}
 <!-- BARRA DE ADMIN -->
 {% block barra %}

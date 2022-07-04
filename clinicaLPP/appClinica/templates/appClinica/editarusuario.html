@@ -2,16 +2,16 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 class="mt-5"> Edicion de usuario </h1>
+    <h1 style="color: lightseagreen" class="mt-5"> Edicion de usuario </h1>
 {% endblock %}
 
 {% block principal %}
-    <p>Modificar el perfil del usuario {{usuario}}</p>
-    <form action="{% url 'usuario_editar' %}" method="POST"> {% csrf_token %}
-        <table>
+    <p style="color:black">Modificar el perfil del usuario {{usuario}}</p>
+    <form style="color:black" action="{% url 'usuario_editar' %}" method="POST"> {% csrf_token %}
+        <table style="color:black">
             {{formulario.as_table}}
         </table>
-        <input type="submit" value="guardar" >
+        <input style="color:black" type="submit" value="guardar" >
     </form>
 {% endblock %}
 <!-- BARRA DE USUARIO -->

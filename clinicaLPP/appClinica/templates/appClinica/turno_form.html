@@ -2,14 +2,14 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 class="mt-5"> Solicitar turno </h1>
+    <h1 style="color:lightseagreen" class="mt-5"> Solicitar turno </h1>
 {% endblock %}
 
 {% block principal %}
-    <form method="POST">
+    <form style="color:black" method="POST"> {% csrf_token%}
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" value="Enviar" />
+        <input style="color:black" type="submit" value="Enviar" />
     </form>
     
 {% endblock %}

@@ -2,27 +2,27 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 style="color:white" class="mt-5"> Nuestros profesionales </h1>
+    <h1 style="color:lightseagreen" class="mt-5"> Nuestros profesionales </h1>
 {% endblock %}
 
 {% block principal %}
 
-    <p style="color:white"> 
+    <p style="color:black"> 
         {% for personal in object_list %}
-            <li style="color:white"> {{personal}} </li>
-            <buton> 
-                <a href="{% url 'personal_eliminar' personal.id %}"> Eliminar personal</a>
+            <li style="color:black"> {{personal}} </li>
+            <buton style="color:black"> 
+                <a style="color:black" href="{% url 'personal_eliminar' personal.id %}"> Eliminar personal</a>
             </buton>
-            <buton> 
-                <a href="{% url 'personal_detalle' personal.id %}"> Detalles</a>
+            <buton style="color:black"> 
+                <a style="color:black" href="{% url 'personal_detalle' personal.id %}"> Detalles</a>
             </buton>
-            <buton> 
-                <a href="{% url 'personal_editar' personal.id %}"> Editar </a>
+            <buton style="color:black"> 
+                <a style="color:black" href="{% url 'personal_editar' personal.id %}"> Editar </a>
             </buton>
         {% endfor %}
         <br>
         <br>
-        <a href="{% url 'personal_agregar' %}"> Agregar personal</a>
+        <a style="color:black" href="{% url 'personal_agregar' %}"> Agregar personal</a>
         <br>
         <br>
 

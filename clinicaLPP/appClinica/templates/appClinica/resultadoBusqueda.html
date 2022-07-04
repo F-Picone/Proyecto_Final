@@ -2,31 +2,31 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 class="mt-5"> Resultados de la busqueda </h1>
+    <h1 style="color:lightseagreen" class="mt-5"> Resultados de la busqueda </h1>
 {% endblock %}
 
 {% block principal %}
-<body>
-    <p> Estamos buscando al paciente con el dni: {{dni}}</p>
+<body style="color:black">
+    <p style="color:black"> Estamos buscando al paciente con el dni: {{dni}}</p>
     {% if pacientes %}
-    <p>Se encontro al paciente</p>
-    <ul>   
+    <p style="color:black">Se encontro al paciente</p>
+    <ul style="color:black">   
         {% for paciente in pacientes %}
-        <p>DNI: {{dni}}</p>
-        <p>NOMBRE: {{paciente.nombre}}</p>
-        <p>APELLIDO: {{paciente.apellido}}</p>
-        <p>OBRA SOCIAL: {{paciente.obra_social}}</p>
-        <a href="{% url 'paciente_eliminar'  paciente.id %}"> Eliminar paciente</a>
-        <a href="{% url 'paciente_editar'  paciente.id %}"> Editar paciente</a>
+        <p style="color:black">DNI: {{dni}}</p>
+        <p style="color:black">NOMBRE: {{paciente.nombre}}</p>
+        <p style="color:black">APELLIDO: {{paciente.apellido}}</p>
+        <p style="color:black">OBRA SOCIAL: {{paciente.obra_social}}</p>
+        <a  style="color:black" href="{% url 'paciente_eliminar'  paciente.id %}"> Eliminar paciente</a>
+        <a style="color:black" href="{% url 'paciente_editar'  paciente.id %}"> Editar paciente</a>
         {% endfor %}
     </ul>
 
     {% else %}
-        <p>No se encontro al paciente</p>
+        <p style="color:black">No se encontro al paciente</p>
     {% endif%}
 </body>
 <buton> 
-    <a href="{% url 'pacientes' %}"> Volves a pacientes</a>
+    <a style="color:black" href="{% url 'pacientes' %}"> Volves a pacientes</a>
 </buton>
 {% endblock %}
 <!-- BARRA DE ADMIN -->
