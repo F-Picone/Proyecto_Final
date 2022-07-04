@@ -1,0 +1,25 @@
+{% extends "appClinica/inicio.html" %}
+{% load static %}
+
+{% block titulo %}
+    <h1 class="mt-5"> Edicion de usuario </h1>
+{% endblock %}
+
+{% block principal %}
+    <p>Modificar el perfil del usuario {{usuario}}</p>
+    <form action="{% url 'usuario_editar' %}" method="POST"> {% csrf_token %}
+        <table>
+            {{formulario.as_table}}
+        </table>
+        <input type="submit" value="guardar" >
+    </form>
+{% endblock %}
+<!-- BARRA DE USUARIO -->
+{% block barra %}
+    <li class="nav-item"><a class="nav-link" href="{% url 'registrarse' %}"> Crear usuario nuevo</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'usuario_editar' %}"> Editar usuario</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'admin' %}">Administrador</a></li>
+
+{% endblock %}

@@ -6,7 +6,8 @@
 {% endblock %}
 
 {% block principal %}
-   
+    <h1> {{mensaje}} </h1>
+    <a href="{% url 'login' %}"> Iniciar sesion</a>
 {% endblock %}
 <!-- BARRA DE ADMIN -->
 {% block barra %}
@@ -14,5 +15,5 @@
     <li class="nav-item"><a class="nav-link" href="{% url 'pacientes' %}">Pacientes</a></li>
     <li class="nav-item"><a class="nav-link" href="{% url 'personal' %}">Personal</a></li>
     <li class="nav-item"><a class="nav-link" href="{% url 'agregarpaciente' %}">Agregar paciente</a></li>
-    <li class="nav-item"><a class="nav-link" href="{% url 'admin' %}">Administrador</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'usuario' %}">Usuario</a></li>
 {% endblock %}

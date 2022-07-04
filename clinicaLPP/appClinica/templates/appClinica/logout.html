@@ -1,0 +1,18 @@
+{% extends "appClinica/inicio.html" %}
+{% load static %}
+
+{% block titulo %}
+    <h1 class="mt-5"> Logout </h1>
+{% endblock %}
+
+{% block principal %}
+    <p>Te has deslogueado satisfactoriamente </p>
+{% endblock %}
+<!-- BARRA DE ADMIN -->
+{% block barra %}
+    <li class="nav-item"><a class="nav-link" href="{% url 'nosotros' %}">Sobre nosotros</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'profesionales' %}">Nuestros profesionales</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contact</a></li>
+    <li class="nav-item active"><a class="nav-link" href="{% url 'turno' %}">Solicitar turno</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'admin' %}">Administrador</a></li>
+{% endblock %}

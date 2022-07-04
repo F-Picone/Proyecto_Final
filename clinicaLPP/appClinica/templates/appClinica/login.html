@@ -1,0 +1,23 @@
+{% extends "appClinica/inicio.html" %}
+{% load static %}
+
+{% block titulo %}
+    <h1 class="mt-5"> Login </h1>
+{% endblock %}
+
+{% block principal %}
+<form style="color:white" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit"> Login </button>
+
+</form>
+{% endblock %}
+<!-- BARRA DE USUARIO -->
+{% block barra %}
+    <li class="nav-item"><a class="nav-link" href="{% url 'registrarse' %}"> Crear usuario nuevo</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'usuario_editar' %}"> Editar usuario</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+    <li class="nav-item"><a class="nav-link" href="{% url 'admin' %}">Administrador</a></li>
+{% endblock %}
